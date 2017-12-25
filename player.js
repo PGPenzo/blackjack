@@ -1,7 +1,8 @@
 class Player {
-  constructor() { //grant access to the reelvant deck
+  constructor(deck) { //grant access to the reelvant deck
     this.hand = [];
     this.score = 0;
+    this.deck = deck;
   }
 
   // hit() {
@@ -14,10 +15,9 @@ class Player {
 }
 
 class Dealer extends Player {
-  constructor(deck, player) {
+  constructor(deck) {
     super();
     this.deck = deck;
-    this.player = player;
   }
 }
 
