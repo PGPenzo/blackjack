@@ -8,6 +8,11 @@ class Card {
   constructor(rank,suit) {
     this.rank = rank;
     this.suit = suit;
+    this.visible = false;
+  }
+
+  flipCard() {
+    this.visible = !this.visible;
   }
 }
 
@@ -34,6 +39,11 @@ class Deck {
       this.cards[k] = temp;
     }
   }
+
+  dealCard() {
+    return this.cards.shift();
+  }
+
 }
 
 module.exports = Deck;
