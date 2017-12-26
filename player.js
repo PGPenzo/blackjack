@@ -2,6 +2,7 @@ var aceCounter = false; // see the scope of the variable
 
 class Player {
   constructor(deck) {
+    this.name = '';
     this.hand = [];
     this.score = 0;
     this.turn = false;
@@ -43,17 +44,17 @@ class Player {
 // work out if score is bust
   isBust() {
     if (this.score > 21) {
-      console.log('END GAME');
+      console.log('THIS PLAYER LOST');
     }
     else {
-      console.log('NOT BUST');
+      // console.log('NOT BUST');
     }
   }
 
   changeTurn() {
     this.turn = !this.turn;
   }
-  
+
 // end of Player class
 }
 
